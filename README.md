@@ -1,8 +1,7 @@
-###  DATE: 
-
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  DATE: 24.08.2024
+###  NAME: T.RUCHITRA
+###  ROLL NO :212223110043
+###  DEPARTMENT: BE CSE IOT
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -77,10 +76,26 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
-
-
-
+~~~
+IRstatus=GPIOREADPIN(GPIO,GPIO_PIN_3);
+    while (1)
+    {
+      if(IRstatus==1){
+      	HAL_GPIO_WritePin(GPIO, GPIO_PIN_0, GPIO_PIN_RESET);
+      	HAL_Delay(1000);
+      	
+      	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+      	HAL_Delay(1000);
+      }
+      else{
+      	HaL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+      	HAL_Delay(1000);
+      }
+    }
+~~~
 ## Output  :
+![image](https://github.com/user-attachments/assets/15fe0557-a0ac-4292-952c-b611fba407fd)
+
  
  
  
